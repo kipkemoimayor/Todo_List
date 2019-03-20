@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+// $(document).ready(function(){
+//   $("span").fadeIn(1000);
+// })
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
