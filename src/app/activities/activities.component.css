@@ -1,0 +1,9 @@
+span{
+  float: right;
+  /* background-color: red;
+  color: white;
+  padding: inherit; */
+}
+#desc{
+  transition: 900ms;
+}

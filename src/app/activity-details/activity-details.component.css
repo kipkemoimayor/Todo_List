@@ -1,0 +1,11 @@
+/* span{
+  float: right;
+
+} */
+#tick{
+  padding: 12.5px;
+  cursor: pointer;
+}
+#tick:hover{
+  box-shadow: 3px 1px 20px black;
+}
