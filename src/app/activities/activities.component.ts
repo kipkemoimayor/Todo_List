@@ -21,8 +21,19 @@ export class ActivitiesComponent implements OnInit {
   }
   completeActivity(isComplete,index){
     if(true){
-      this.activity.splice(index,1);
+      let toDelete=confirm(`Are you sure you want to delete ${this.activity[index].title}`);
+      if(toDelete){
+        this.activity.splice(index,1);
+      }
     }
+
+  }
+
+  addNewList(list){
+    let listLength=this.activity.length;
+    list.id=listLength+1;
+    list.date=new Date(list.date)
+    this.activity.push(list)
   }
 
 

@@ -1,14 +1,24 @@
-    <div class="main">
-      <h3>Upcoming activities</h3>
-      <div *ngFor='let list of activity; let i=index' class="card">
-        <ul class="list-group">
-
-          <li class="list-group-item">{{list.title}}  Due date {{list.date|date}} <span title="show more details" (click)='toogleDetails(i)' class="btn btn-info">Description</span>  </li>
-
-          <li appBehaviour id="desc" class="list-group-item bg-light"><app-activity-details *ngIf='list.showDescription' [list]='list' (isComplete)='completeActivity($event,i)'></app-activity-details> </li>
-        </ul>
-        </div>
+<div class="row">
 
 
+<div class="col-md-6">
+  <div class="main">
+    <h3>Upcoming activities</h3>
+    <div *ngFor='let list of activity; let i=index' class="card">
+      <ul class="list-group">
 
-    </div>
+        <li class="list-group-item">{{list.title}}  Due date {{list.date|date}} <span title="show more details" (click)='toogleDetails(i)' class="btn btn-info">Description</span>  </li>
+
+        <li appBehaviour id="desc" class="list-group-item bg-light"><app-activity-details *ngIf='list.showDescription' [list]='list' (isComplete)='completeActivity($event,i)'></app-activity-details> </li>
+      </ul>
+      </div>
+
+
+
+
+  </div>
+</div>
+<div class="col-md-6">
+  <app-list-form (addList)="addNewList($event)"></app-list-form>
+</div>
+</div>
