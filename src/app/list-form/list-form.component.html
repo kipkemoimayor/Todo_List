@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)='submitList' #ngForm='ngForm' class="needs-validation" action="index.html" method="post">
+  <form (ngSubmit)='submitList()' #ngForm='ngForm' class="needs-validation" action="index.html" method="post">
     <div class="form-group">
       <label for="validationCustom01">Activity Title</label>
       <input  class="form-control" required type="text" id="validationCustom01" placeholder="Add name" [(ngModel)]='newList.title' #title="ngModel" name="title" value="">
@@ -7,7 +7,7 @@
         Title cannot be empty!
       </div>
     </div>
-    <div class="form-group shadow-textarea purple-border">
+    <div class="form-group shadow-textarea">
       <label for="">Add Description</label>
       <textarea required class="form-control z-depth-1" name="descriptions" [(ngModel)]='newList.descriptions' #descriptions='ngModel' rows="8" cols="80">
       </textarea>
